@@ -1,10 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 using FisherInsuranceApi.Models;
 
 namespace FisherInsuranceApi.Data
 {
-    public class FisherContext : DbContext 
+    public class FisherContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Claim> Claims { get; set; }
         public DbSet<Quote> Quotes { get; set;}
